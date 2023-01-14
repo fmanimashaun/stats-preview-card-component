@@ -1,0 +1,16 @@
+/* import fonts */
+
+/* Inter */
+@font-face {
+  font-family: 'Inter';
+  src: url("../fonts/Inter/Inter-VariableFont_slnt_wght.ttf") format('TrueType');
+}
+
+/* ILexend Deca */
+@font-face {
+  font-family: 'Lexend Deca';
+  src: url("../fonts/Lexend_Deca/LexendDeca-VariableFont_wght.ttf") format('TrueType');
+}
+
+$primary-ff: 'Inter', sans-serif;
+$secondary-ff:'Lexend Deca', sans-serif;
