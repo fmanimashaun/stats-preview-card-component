@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkstat_preview_card_component=self.webpackChunkstat_preview_card_component||[]).push([[179],{971:()=>{}},e=>{e(e.s=971)}]);
