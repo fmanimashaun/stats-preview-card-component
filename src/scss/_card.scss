@@ -2,3 +2,116 @@
 /* stylelint-disable csstree/validator */
 @use './_colors.scss';
 @use './_fonts.scss';
+
+.stat-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 540px;
+  margin-inline: auto;
+  background-color: colors.$dark-desaturated-blue;
+  box-shadow: 0px 20px 20px -10px rgba(23, 25, 41, 0.203087);
+  border-radius: 8px;
+
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1110px;
+  }
+
+  &__img-wrapper {
+    max-width: 540px;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+
+    @media only screen and (min-width: 768px) {
+      border-radius: 0 8px 8px 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: clamp(2.50rem, calc(1.82rem + 2.91vw), 4.44rem) clamp(2.00rem, calc(0.61rem + 5.92vw), 5.94rem) clamp(2.00rem, calc(1.41rem + 2.54vw), 3.69rem) clamp(2.00rem, calc(1.12rem + 3.76vw), 4.50rem);
+
+    @media only screen and (min-width: 768px) {
+      order: -1;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    &-heading {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 32px;
+      color: colors.$white;
+      margin-block-end: 16px;
+
+      &>span {
+        color: colors.$soft-violet;
+      }
+
+      @media only screen and (min-width: 768px) {
+        font-size: 36px;
+        line-height: 44px;
+        margin-block-end: 25px;
+      }
+    }
+
+    &-sub-heading {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 25px;
+      color: colors.$slightly-transparent-white;
+      margin-block-end: clamp(2.50rem, calc(1.80rem + 3.00vw), 4.50rem);
+    }
+
+    &-stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      width: 100%;
+
+      @media only screen and (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &__stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2px;
+
+    &-title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 29px;
+      color: colors.$white;
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 25px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: colors.$slightly-transparent-white-2;
+    }
+  }
+}
