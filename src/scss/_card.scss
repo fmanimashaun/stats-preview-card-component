@@ -71,6 +71,7 @@
       line-height: 25px;
       color: colors.$slightly-transparent-white;
       margin-block-end: clamp(2.5rem, calc(1.8rem + 3vw), 4.5rem);
+      max-inline-size: 374px;
     }
 
     &-stat {
@@ -83,8 +84,9 @@
 
       @media only screen and (min-width: 768px) {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: flex-start;
+        gap: clamp(1.50rem, calc(-1.29rem + 5.80vw), 3.94rem);
       }
     }
   }
